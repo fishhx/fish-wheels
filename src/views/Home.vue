@@ -1,7 +1,8 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HelloWorld msg="Welcome to Your fish-wheels!"/>
+    <g-button :loading="true" @click="start">开始使用</g-button>
   </div>
 </template>
 
@@ -13,6 +14,11 @@ export default {
   name: 'Home',
   components: {
     HelloWorld
+  },
+  methods: {
+    start() {
+      this.$router.push('/About')
+    }
   }
 }
 </script>

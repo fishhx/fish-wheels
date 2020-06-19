@@ -2,7 +2,7 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld msg="Welcome to Your fish-wheels!"/>
-    <g-button :loading="true" @click="start">开始使用</g-button>
+    <g-button :loading="true" @click="start">START</g-button>
   </div>
 </template>
 

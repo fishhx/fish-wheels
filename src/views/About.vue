@@ -37,6 +37,110 @@
       <g-input v-model="value"></g-input>
       <p>Value: {{value}}</p>
     </div>
+    <div class="grid">
+      <h1>Grid</h1>
+      <g-row class="demoRow">
+        <g-col span="8">
+          <div class="demoCol">8</div>
+        </g-col>
+        <g-col span="8">
+          <div class="demoCol">8</div>
+        </g-col>
+        <g-col span="8">
+          <div class="demoCol">8</div>
+        </g-col>
+      </g-row>
+
+      <g-row class="demoRow">
+        <g-col span="6">
+          <div class="demoCol">6</div>
+        </g-col>
+        <g-col span="6">
+          <div class="demoCol">6</div>
+        </g-col>
+        <g-col span="6">
+          <div class="demoCol">6</div>
+        </g-col>
+        <g-col span="6">
+          <div class="demoCol">6</div>
+        </g-col>
+      </g-row>
+
+      <g-row class="demoRow">
+        <g-col span="4">
+          <div class="demoCol">4</div>
+        </g-col>
+        <g-col span="4">
+          <div class="demoCol">4</div>
+        </g-col>
+        <g-col span="4">
+          <div class="demoCol">4</div>
+        </g-col>
+        <g-col span="4">
+          <div class="demoCol">4</div>
+        </g-col>
+        <g-col span="4">
+          <div class="demoCol">4</div>
+        </g-col>
+        <g-col span="4">
+          <div class="demoCol">4</div>
+        </g-col>
+      </g-row>
+
+      <g-row class="demoRow">
+        <g-col span="2">
+          <div class="demoCol">2</div>
+        </g-col>
+        <g-col span="2">
+          <div class="demoCol">2</div>
+        </g-col>
+        <g-col span="2">
+          <div class="demoCol">2</div>
+        </g-col>
+        <g-col span="2">
+          <div class="demoCol">2</div>
+        </g-col>
+        <g-col span="2">
+          <div class="demoCol">2</div>
+        </g-col>
+        <g-col span="2">
+          <div class="demoCol">2</div>
+        </g-col>
+        <g-col span="2">
+          <div class="demoCol">2</div>
+        </g-col>
+        <g-col span="2">
+          <div class="demoCol">2</div>
+        </g-col>
+        <g-col span="2">
+          <div class="demoCol">2</div>
+        </g-col>
+        <g-col span="2">
+          <div class="demoCol">2</div>
+        </g-col>
+        <g-col span="2">
+          <div class="demoCol">2</div>
+        </g-col>
+        <g-col span="2">
+          <div class="demoCol">2</div>
+        </g-col>
+      </g-row>
+    </div>
+    <div class="tabs">
+      <h1>Tabs</h1>
+      <g-tabs :selected="selected">
+        <g-tabs-head>
+          <g-tabs-item name="1">tab1</g-tabs-item>
+          <g-tabs-item name="2">tab2</g-tabs-item>
+          <g-tabs-item name="3">tab3</g-tabs-item>
+        </g-tabs-head>
+        <g-tabs-body>
+          <g-tabs-pane name="1">content 1</g-tabs-pane>
+          <g-tabs-pane name="2">content 2</g-tabs-pane>
+          <g-tabs-pane name="3">content 3</g-tabs-pane>
+        </g-tabs-body>
+      </g-tabs>
+    </div>
   </div>
 </template>
 
@@ -45,7 +149,8 @@ export default {
   data() {
     return {
       loading: true,
-      value: "Bi-direction"
+      value: "Bi-direction",
+      selected: '1'
     };
   },
   methods: {
@@ -56,6 +161,9 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+* {
+  box-sizing: border-box;
+}
 .button {
   // margin-bottom: 100px;
   .g-button {
@@ -66,5 +174,13 @@ export default {
   margin: 0 3px;
 }
 .g-input {
+}
+.grid {
+  width: 50%;
+  margin: 0 auto;
+}
+.tabs {
+  width: 60%;
+  margin: 0 auto;
 }
 </style>

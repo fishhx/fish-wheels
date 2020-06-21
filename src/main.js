@@ -14,6 +14,10 @@ import TabsItem from './components/tabs/tabs-item.vue'
 import TabsHead from './components/tabs/tabs-head.vue'
 import TabsPane from './components/tabs/tabs-pane.vue'
 import TabsBody from './components/tabs/tabs-body.vue'
+import Pager from './components/pager.vue'
+import Slides from './components/slides/slides.vue'
+import SlidesItem from './components/slides/slides-item.vue'
+import Popover from './components/popover.vue'
 
 // import './assets/styles/_global.scss'
 
@@ -28,6 +32,10 @@ Vue.component('g-tabs-item', TabsItem)
 Vue.component('g-tabs-head', TabsHead)
 Vue.component('g-tabs-pane', TabsPane)
 Vue.component('g-tabs-body', TabsBody)
+Vue.component('g-pager', Pager)
+Vue.component('g-slides', Slides)
+Vue.component('g-slides-item', SlidesItem)
+Vue.component('g-popover', Popover)
 
 
 Vue.config.productionTip = false

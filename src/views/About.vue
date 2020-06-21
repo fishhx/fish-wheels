@@ -23,7 +23,8 @@
       <g-icon :name="'loading'"></g-icon>
       <g-icon :name="'right'"></g-icon>
       <g-icon :name="'error'"></g-icon>
-      <g-icon :name="'info'"></g-icon>
+      <g-icon :name="'upload'"></g-icon>
+      <g-icon :name="'ellipsis'"></g-icon>
     </div>
     <div class="input">
       <h1>Input</h1>
@@ -141,6 +142,43 @@
         </g-tabs-body>
       </g-tabs>
     </div>
+    <div class="pager">
+      <h1>Pager</h1>
+      <g-pager :total-page="20" :current-page.sync="currentPage"></g-pager>
+    </div>
+    <div class="slides">
+      <h1>Carousel</h1>
+      <g-slides :selected.sync="selected">
+        <g-slides-item name="1">
+          <div class="box">1</div>
+        </g-slides-item>
+        <g-slides-item name="2">
+          <div class="box">2</div>
+        </g-slides-item>
+        <g-slides-item name="3">
+          <div class="box">3</div>
+        </g-slides-item>
+      </g-slides>
+    </div>
+    <div class="popover">
+      <h1>Popover</h1>
+      <g-popover>
+        <g-button>上方弹出</g-button>
+        <template slot="content">弹出内容</template>
+      </g-popover>
+      <g-popover position="bottom">
+        <g-button>下方弹出</g-button>
+        <template slot="content">弹出内容</template>
+      </g-popover>
+      <g-popover position="left">
+        <g-button>左边弹出</g-button>
+        <template slot="content">弹出内容</template>
+      </g-popover>
+      <g-popover position="right">
+        <g-button>右边弹出</g-button>
+        <template slot="content">弹出内容</template>
+      </g-popover>
+    </div>
   </div>
 </template>
 
@@ -150,7 +188,8 @@ export default {
     return {
       loading: true,
       value: "Bi-direction",
-      selected: '1'
+      selected: "1",
+      currentPage: 5
     };
   },
   methods: {
@@ -173,8 +212,6 @@ export default {
 .g-icon {
   margin: 0 3px;
 }
-.g-input {
-}
 .grid {
   width: 50%;
   margin: 0 auto;
@@ -182,5 +219,29 @@ export default {
 .tabs {
   width: 60%;
   margin: 0 auto;
+}
+.pager {
+  .g-pager {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.slides {
+  .box {
+    margin: 0 auto;
+    width: 50%;
+    height: 300px;
+    background: #aaa;
+    // opacity: 0.7;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.popover {
+  margin: 0 5px;
 }
 </style>

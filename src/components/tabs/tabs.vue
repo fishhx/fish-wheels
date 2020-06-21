@@ -58,5 +58,6 @@
 </script>
 <style>
   .tabs {
+    height: 180px;
   }
 </style>
